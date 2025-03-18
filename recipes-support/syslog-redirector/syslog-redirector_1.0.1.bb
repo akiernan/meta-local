@@ -12,9 +12,5 @@ do_compile () {
 }
 
 do_install () {
-	install -d -m 0755 ${D}${libdir}
-	install -m 0755 ${S}/syslog-redirector.so ${D}${libdir}/syslog-redirector.so
+	install -D -m 0755 ${S}/syslog-redirector.so ${D}${libexecdir}/syslog-redirector.so
 }
-
-SOLIBS = ".so"
-FILES_SOLIBSDEV = ""
